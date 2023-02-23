@@ -7,5 +7,15 @@
 </head>
 <body>
 
+<div class="container">
+    <div class="main">
+
+    </div>
+
+    <div class="login">
+
+    </div>
+</div>
+
 </body>
 </html>
