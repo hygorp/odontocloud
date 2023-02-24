@@ -520,7 +520,7 @@ $.fn.video.settings.templates = {
     if(image) {
       html += ''
         + '<i class="video play icon"></i>'
-        + '<Images class="placeholder" src="' + image + '">'
+        + '<img class="placeholder" src="' + image + '">'
       ;
     }
     html += '<div class="embed"></div>';

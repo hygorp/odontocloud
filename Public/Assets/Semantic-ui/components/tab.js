@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Tab
+ * # Semantic UI 2.5.0 - Tab
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -437,7 +437,7 @@ $.fn.tab = function(parameters) {
             }
             else {
               if(evaluateScripts) {
-                module.debug('Updating HTML and evaluating inline Scripts', tabPath, html);
+                module.debug('Updating HTML and evaluating inline scripts', tabPath, html);
                 $tab.html(html);
               }
               else {
@@ -904,11 +904,11 @@ $.fn.tab.settings = {
   alwaysRefresh   : false,      // load tab content new every tab click
   cache           : true,       // cache the content requests to pull locally
   loadOnce        : false,      // Whether tab data should only be loaded once when using remote content
-  cacheType       : 'response', // Whether to cache exact response, or to html cache contents after Scripts execute
+  cacheType       : 'response', // Whether to cache exact response, or to html cache contents after scripts execute
   ignoreFirstLoad : false,      // don't load remote content on first load
 
   apiSettings     : false,      // settings for api call
-  evaluateScripts : 'once',     // whether inline Scripts should be parsed (true/false/once). Once will not re-evaluate on cached content
+  evaluateScripts : 'once',     // whether inline scripts should be parsed (true/false/once). Once will not re-evaluate on cached content
 
   onFirstLoad : function(tabPath, parameterArray, historyEvent) {}, // called first time loaded
   onLoad      : function(tabPath, parameterArray, historyEvent) {}, // called on every load

@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Search
+ * # Semantic UI 2.5.0 - Search
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -935,7 +935,7 @@ $.fn.search = function(parameters) {
           }
           if(!module.is.visible() && module.has.results()) {
             if( module.can.transition() ) {
-              module.debug('Showing results with Stylesheets animations');
+              module.debug('Showing results with css animations');
               $results
                 .transition({
                   animation  : settings.transition + ' in',
@@ -966,7 +966,7 @@ $.fn.search = function(parameters) {
           ;
           if( module.is.visible() ) {
             if( module.can.transition() ) {
-              module.debug('Hiding results with Stylesheets animations');
+              module.debug('Hiding results with css animations');
               $results
                 .transition({
                   animation  : settings.transition + ' out',
@@ -1417,7 +1417,7 @@ $.fn.search.settings = {
               if(result[fields.image] !== undefined) {
                 html += ''
                   + '<div class="image">'
-                  + ' <Images src="' + result[fields.image] + '">'
+                  + ' <img src="' + result[fields.image] + '">'
                   + '</div>'
                 ;
               }
@@ -1469,7 +1469,7 @@ $.fn.search.settings = {
           if(result[fields.image] !== undefined) {
             html += ''
               + '<div class="image">'
-              + ' <Images src="' + result[fields.image] + '">'
+              + ' <img src="' + result[fields.image] + '">'
               + '</div>'
             ;
           }

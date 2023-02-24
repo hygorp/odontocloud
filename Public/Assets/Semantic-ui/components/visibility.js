@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Visibility
+ * # Semantic UI 2.5.0 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -236,7 +236,7 @@ $.fn.visibility = function(parameters) {
             imagesLength  = images.length,
             loadedCounter = 0,
             cache         = [],
-            cacheImage    = document.createElement('Images'),
+            cacheImage    = document.createElement('img'),
             handleLoad    = function() {
               loadedCounter++;
               if (loadedCounter >= images.length) {
@@ -247,7 +247,7 @@ $.fn.visibility = function(parameters) {
             }
           ;
           while (imagesLength--) {
-            cacheImage         = document.createElement('Images');
+            cacheImage         = document.createElement('img');
             cacheImage.onload  = handleLoad;
             cacheImage.onerror = handleLoad;
             cacheImage.src     = images[imagesLength];

@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Modal
+ * # Semantic UI 2.5.0 - Modal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -138,6 +138,9 @@ $.fn.modal = function(parameters) {
         },
 
         destroy: function() {
+          if (observer) {
+            observer.disconnect();
+          }
           module.verbose('Destroying previous modal');
           $module
             .removeData(moduleNamespace)
@@ -362,7 +365,7 @@ $.fn.modal = function(parameters) {
               }
               settings.onShow.call(element);
               if(settings.transition && $.fn.transition !== undefined && $module.transition('is supported')) {
-                module.debug('Showing modal with Stylesheets animations');
+                module.debug('Showing modal with css animations');
                 $module
                   .transition({
                     debug       : settings.debug,

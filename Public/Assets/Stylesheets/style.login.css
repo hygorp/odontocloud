@@ -13,11 +13,18 @@
 
 .main{
     grid-area: main;
+    background-color: #C0C2DD;
+}
+
+.login-avatar{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
     background-image: url("../Images/oc_login_avatar_2.svg");
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
 }
+
 .login {
     grid-area: login;
 }

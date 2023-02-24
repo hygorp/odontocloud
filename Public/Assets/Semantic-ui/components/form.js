@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Form Validation
+ * # Semantic UI 2.5.0 - Form Validation
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -723,7 +723,7 @@ $.fn.form = function(parameters) {
               ;
               if(!promptExists) {
                 if(settings.transition && $.fn.transition !== undefined && $module.transition('is supported')) {
-                  module.verbose('Displaying error with Stylesheets transition', settings.transition);
+                  module.verbose('Displaying error with css transition', settings.transition);
                   $prompt.transition(settings.transition + ' in', settings.duration);
                 }
                 else {

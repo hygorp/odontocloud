@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Dimmer
+ * # Semantic UI 2.5.0 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -151,7 +151,7 @@ $.fn.dimmer = function(parameters) {
 
         event: {
           click: function(event) {
-            module.verbose('Determining if event occured on dimmer', event);
+            module.verbose('Determining if event occurred on dimmer', event);
             if( $dimmer.find(event.target).length === 0 || $(event.target).is(selector.content) ) {
               module.hide();
               event.stopImmediatePropagation();
@@ -290,7 +290,7 @@ $.fn.dimmer = function(parameters) {
               : function(){}
             ;
             if(settings.useCSS && $.fn.transition !== undefined && $dimmer.transition('is supported')) {
-              module.verbose('Hiding dimmer with Stylesheets');
+              module.verbose('Hiding dimmer with css');
               $dimmer
                 .transition({
                   displayType : settings.useFlex
@@ -678,10 +678,10 @@ $.fn.dimmer.settings = {
   // whether to bind close events
   closable    : 'auto',
 
-  // whether to use Stylesheets animations
+  // whether to use css animations
   useCSS      : true,
 
-  // Stylesheets animation to use
+  // css animation to use
   transition  : 'fade',
 
   // event to bind to

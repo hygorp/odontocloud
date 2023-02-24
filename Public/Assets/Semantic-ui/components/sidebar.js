@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Sidebar
+ * # Semantic UI 2.5.0 - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -284,7 +284,7 @@ $.fn.sidebar = function(parameters) {
             $style = $(style)
               .appendTo($head)
             ;
-            module.debug('Adding sizing Stylesheets to head', $style);
+            module.debug('Adding sizing css to head', $style);
           }
         },
 
@@ -608,7 +608,7 @@ $.fn.sidebar = function(parameters) {
         remove: {
 
           inlineCSS: function() {
-            module.debug('Removing inline Stylesheets styles', $style);
+            module.debug('Removing inline css styles', $style);
             if($style && $style.length > 0) {
               $style.remove();
             }

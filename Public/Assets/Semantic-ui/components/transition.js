@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Transition
+ * # Semantic UI 2.5.0 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -722,7 +722,7 @@ $.fn.transition = function() {
                 directionExists = true;
               }
               else if(currentAnimation == 'none' || !currentAnimation) {
-                module.debug('No animation defined in Stylesheets', animation);
+                module.debug('No animation defined in css', animation);
                 return;
               }
               else {

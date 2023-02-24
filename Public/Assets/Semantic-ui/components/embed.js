@@ -1,5 +1,5 @@
 /*!
- * # Semantic UI 2.4.1 - Embed
+ * # Semantic UI 2.5.0 - Embed
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -687,7 +687,7 @@ $.fn.embed.settings = {
         html += '<i class="' + icon + ' icon"></i>';
       }
       if(image) {
-        html += '<Images class="placeholder" src="' + image + '">';
+        html += '<img class="placeholder" src="' + image + '">';
       }
       return html;
     }

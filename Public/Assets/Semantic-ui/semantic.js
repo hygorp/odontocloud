@@ -1,15 +1,15 @@
  /*
- * # Semantic UI - 2.4.1
+ * # Semantic UI - 2.5.0
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
- * Copyright 2014 Contributors
+ * Copyright 2022 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 /*!
- * # Semantic UI 2.4.1 - Site
+ * # Semantic UI 2.5.0 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -497,7 +497,7 @@ $.extend($.expr[ ":" ], {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Form Validation
+ * # Semantic UI 2.5.0 - Form Validation
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -1221,7 +1221,7 @@ $.fn.form = function(parameters) {
               ;
               if(!promptExists) {
                 if(settings.transition && $.fn.transition !== undefined && $module.transition('is supported')) {
-                  module.verbose('Displaying error with Stylesheets transition', settings.transition);
+                  module.verbose('Displaying error with css transition', settings.transition);
                   $prompt.transition(settings.transition + ' in', settings.duration);
                 }
                 else {
@@ -2204,7 +2204,7 @@ $.fn.form.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Accordion
+ * # Semantic UI 2.5.0 - Accordion
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -2818,7 +2818,7 @@ $.extend( $.easing, {
 
 
 /*!
- * # Semantic UI 2.4.1 - Checkbox
+ * # Semantic UI 2.5.0 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -3650,7 +3650,7 @@ $.fn.checkbox.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Dimmer
+ * # Semantic UI 2.5.0 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -3802,7 +3802,7 @@ $.fn.dimmer = function(parameters) {
 
         event: {
           click: function(event) {
-            module.verbose('Determining if event occured on dimmer', event);
+            module.verbose('Determining if event occurred on dimmer', event);
             if( $dimmer.find(event.target).length === 0 || $(event.target).is(selector.content) ) {
               module.hide();
               event.stopImmediatePropagation();
@@ -3941,7 +3941,7 @@ $.fn.dimmer = function(parameters) {
               : function(){}
             ;
             if(settings.useCSS && $.fn.transition !== undefined && $dimmer.transition('is supported')) {
-              module.verbose('Hiding dimmer with Stylesheets');
+              module.verbose('Hiding dimmer with css');
               $dimmer
                 .transition({
                   displayType : settings.useFlex
@@ -4329,10 +4329,10 @@ $.fn.dimmer.settings = {
   // whether to bind close events
   closable    : 'auto',
 
-  // whether to use Stylesheets animations
+  // whether to use css animations
   useCSS      : true,
 
-  // Stylesheets animation to use
+  // css animation to use
   transition  : 'fade',
 
   // event to bind to
@@ -4384,7 +4384,7 @@ $.fn.dimmer.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Dropdown
+ * # Semantic UI 2.5.0 - Dropdown
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -8340,7 +8340,7 @@ $.fn.dropdown.settings.templates = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Embed
+ * # Semantic UI 2.5.0 - Embed
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -9028,7 +9028,7 @@ $.fn.embed.settings = {
         html += '<i class="' + icon + ' icon"></i>';
       }
       if(image) {
-        html += '<Images class="placeholder" src="' + image + '">';
+        html += '<img class="placeholder" src="' + image + '">';
       }
       return html;
     }
@@ -9047,7 +9047,7 @@ $.fn.embed.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Modal
+ * # Semantic UI 2.5.0 - Modal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -9186,6 +9186,9 @@ $.fn.modal = function(parameters) {
         },
 
         destroy: function() {
+          if (observer) {
+            observer.disconnect();
+          }
           module.verbose('Destroying previous modal');
           $module
             .removeData(moduleNamespace)
@@ -9410,7 +9413,7 @@ $.fn.modal = function(parameters) {
               }
               settings.onShow.call(element);
               if(settings.transition && $.fn.transition !== undefined && $module.transition('is supported')) {
-                module.debug('Showing modal with Stylesheets animations');
+                module.debug('Showing modal with css animations');
                 $module
                   .transition({
                     debug       : settings.debug,
@@ -10082,7 +10085,7 @@ $.fn.modal.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Nag
+ * # Semantic UI 2.5.0 - Nag
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -10590,7 +10593,7 @@ $.extend( $.easing, {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Popup
+ * # Semantic UI 2.5.0 - Popup
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -12123,7 +12126,7 @@ $.fn.popup.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Progress
+ * # Semantic UI 2.5.0 - Progress
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -13055,7 +13058,7 @@ $.fn.progress.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Rating
+ * # Semantic UI 2.5.0 - Rating
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -13564,7 +13567,7 @@ $.fn.rating.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Search
+ * # Semantic UI 2.5.0 - Search
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -14500,7 +14503,7 @@ $.fn.search = function(parameters) {
           }
           if(!module.is.visible() && module.has.results()) {
             if( module.can.transition() ) {
-              module.debug('Showing results with Stylesheets animations');
+              module.debug('Showing results with css animations');
               $results
                 .transition({
                   animation  : settings.transition + ' in',
@@ -14531,7 +14534,7 @@ $.fn.search = function(parameters) {
           ;
           if( module.is.visible() ) {
             if( module.can.transition() ) {
-              module.debug('Hiding results with Stylesheets animations');
+              module.debug('Hiding results with css animations');
               $results
                 .transition({
                   animation  : settings.transition + ' out',
@@ -14982,7 +14985,7 @@ $.fn.search.settings = {
               if(result[fields.image] !== undefined) {
                 html += ''
                   + '<div class="image">'
-                  + ' <Images src="' + result[fields.image] + '">'
+                  + ' <img src="' + result[fields.image] + '">'
                   + '</div>'
                 ;
               }
@@ -15034,7 +15037,7 @@ $.fn.search.settings = {
           if(result[fields.image] !== undefined) {
             html += ''
               + '<div class="image">'
-              + ' <Images src="' + result[fields.image] + '">'
+              + ' <img src="' + result[fields.image] + '">'
               + '</div>'
             ;
           }
@@ -15070,7 +15073,7 @@ $.fn.search.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Shape
+ * # Semantic UI 2.5.0 - Shape
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -15992,7 +15995,7 @@ $.fn.shape.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Sidebar
+ * # Semantic UI 2.5.0 - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -16277,7 +16280,7 @@ $.fn.sidebar = function(parameters) {
             $style = $(style)
               .appendTo($head)
             ;
-            module.debug('Adding sizing Stylesheets to head', $style);
+            module.debug('Adding sizing css to head', $style);
           }
         },
 
@@ -16601,7 +16604,7 @@ $.fn.sidebar = function(parameters) {
         remove: {
 
           inlineCSS: function() {
-            module.debug('Removing inline Stylesheets styles', $style);
+            module.debug('Removing inline css styles', $style);
             if($style && $style.length > 0) {
               $style.remove();
             }
@@ -17026,7 +17029,7 @@ $.fn.sidebar.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Sticky
+ * # Semantic UI 2.5.0 - Sticky
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -17429,6 +17432,18 @@ $.fn.sticky = function(parameters) {
               module.determineContainer();
             }
             else {
+              var tallestHeight = Math.max(module.cache.context.height, module.cache.element.height);
+              if(tallestHeight - $container.outerHeight() > settings.jitter) {
+                module.debug('Context is taller than container. Specifying exact height for container', module.cache.context.height);
+                $container.css({
+                  height: tallestHeight,
+                });
+              }
+              else {
+                $container.css({
+                  height: '',
+                });
+              }
               if( Math.abs($container.outerHeight() - module.cache.context.height) > settings.jitter) {
                 module.debug('Context has padding, specifying exact height for container', module.cache.context.height);
                 $container.css({
@@ -17465,7 +17480,7 @@ $.fn.sticky = function(parameters) {
           },
           size: function() {
             if(module.cache.element.height !== 0 && module.cache.element.width !== 0) {
-              element.style.setProperty('width',  module.cache.element.width  + 'px', 'important');
+              element.style.setProperty('width', module.cache.element.width  + 'px', 'important');
               element.style.setProperty('height', module.cache.element.height + 'px', 'important');
             }
           }
@@ -17528,7 +17543,7 @@ $.fn.sticky = function(parameters) {
                 module.bindBottom();
               }
               else if(scroll.top > element.top) {
-                if( (element.height + scroll.top - elementScroll) >= context.bottom ) {
+                if((element.height + scroll.top - elementScroll) >= context.bottom  && element.height < context.height) {
                   module.debug('Initial element position is bottom of container');
                   module.bindBottom();
                 }
@@ -17607,6 +17622,9 @@ $.fn.sticky = function(parameters) {
         bindTop: function() {
           module.debug('Binding element to top of parent container');
           module.remove.offset();
+          if(settings.setSize) {
+            module.set.size();
+          }
           $module
             .css({
               left         : '',
@@ -17624,6 +17642,9 @@ $.fn.sticky = function(parameters) {
         bindBottom: function() {
           module.debug('Binding element to bottom of parent container');
           module.remove.offset();
+          if(settings.setSize) {
+            module.set.size();
+          }
           $module
             .css({
               left         : '',
@@ -17986,7 +18007,7 @@ $.fn.sticky.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Tab
+ * # Semantic UI 2.5.0 - Tab
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -18424,7 +18445,7 @@ $.fn.tab = function(parameters) {
             }
             else {
               if(evaluateScripts) {
-                module.debug('Updating HTML and evaluating inline Scripts', tabPath, html);
+                module.debug('Updating HTML and evaluating inline scripts', tabPath, html);
                 $tab.html(html);
               }
               else {
@@ -18891,11 +18912,11 @@ $.fn.tab.settings = {
   alwaysRefresh   : false,      // load tab content new every tab click
   cache           : true,       // cache the content requests to pull locally
   loadOnce        : false,      // Whether tab data should only be loaded once when using remote content
-  cacheType       : 'response', // Whether to cache exact response, or to html cache contents after Scripts execute
+  cacheType       : 'response', // Whether to cache exact response, or to html cache contents after scripts execute
   ignoreFirstLoad : false,      // don't load remote content on first load
 
   apiSettings     : false,      // settings for api call
-  evaluateScripts : 'once',     // whether inline Scripts should be parsed (true/false/once). Once will not re-evaluate on cached content
+  evaluateScripts : 'once',     // whether inline scripts should be parsed (true/false/once). Once will not re-evaluate on cached content
 
   onFirstLoad : function(tabPath, parameterArray, historyEvent) {}, // called first time loaded
   onLoad      : function(tabPath, parameterArray, historyEvent) {}, // called on every load
@@ -18939,7 +18960,7 @@ $.fn.tab.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Transition
+ * # Semantic UI 2.5.0 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -19662,7 +19683,7 @@ $.fn.transition = function() {
                 directionExists = true;
               }
               else if(currentAnimation == 'none' || !currentAnimation) {
-                module.debug('No animation defined in Stylesheets', animation);
+                module.debug('No animation defined in css', animation);
                 return;
               }
               else {
@@ -20035,7 +20056,7 @@ $.fn.transition.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - API
+ * # Semantic UI 2.5.0 - API
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -21203,7 +21224,7 @@ $.api.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.4.1 - Visibility
+ * # Semantic UI 2.5.0 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -21440,7 +21461,7 @@ $.fn.visibility = function(parameters) {
             imagesLength  = images.length,
             loadedCounter = 0,
             cache         = [],
-            cacheImage    = document.createElement('Images'),
+            cacheImage    = document.createElement('img'),
             handleLoad    = function() {
               loadedCounter++;
               if (loadedCounter >= images.length) {
@@ -21451,7 +21472,7 @@ $.fn.visibility = function(parameters) {
             }
           ;
           while (imagesLength--) {
-            cacheImage         = document.createElement('Images');
+            cacheImage         = document.createElement('img');
             cacheImage.onload  = handleLoad;
             cacheImage.onerror = handleLoad;
             cacheImage.src     = images[imagesLength];
