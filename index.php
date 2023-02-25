@@ -20,9 +20,20 @@
 
     <div class="login">
 
-        <button class="ui primary button">
-            Save
-        </button>
+        <BR>
+        <BR>
+        <form class="ui form">
+            <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+            </div>
+
+            <button class="ui primary button" type="submit">Submit</button>
+        </form>
 
     </div>
 </div>
