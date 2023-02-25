@@ -27,10 +27,13 @@
             </div>
             <div class="field">
                 <label>Senha</label>
-                <input type="password" name="senhae" placeholder="Senha">
+                <input type="password" name="senha" placeholder="Senha">
             </div>
             <br>
-            <button class="ui primary button fluid" type="submit">Entrar</button>
+            <button class="ui primary right labeled icon large button fluid" type="submit">
+                <i class="right lock icon"></i>
+                Entrar
+            </button>
         </form>
     </div>
 </div>
