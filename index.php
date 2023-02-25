@@ -19,22 +19,19 @@
     </div>
 
     <div class="login">
-
-        <BR>
-        <BR>
-        <form class="ui form">
+        <form class="ui large form">
+            <h2 class="ui dividing header">Login</h2>
             <div class="field">
-                <label>First Name</label>
-                <input type="text" name="first-name" placeholder="First Name">
+                <label>Usuário</label>
+                <input type="text" name="usuario" placeholder="Usuário ou Email">
             </div>
             <div class="field">
-                <label>Last Name</label>
-                <input type="text" name="last-name" placeholder="Last Name">
+                <label>Senha</label>
+                <input type="password" name="senhae" placeholder="Senha">
             </div>
-
-            <button class="ui primary button" type="submit">Submit</button>
+            <br>
+            <button class="ui primary button fluid" type="submit">Entrar</button>
         </form>
-
     </div>
 </div>
 
