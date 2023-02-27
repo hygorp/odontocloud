@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "left main";
+    grid-template-columns: 260px 4fr;
+    grid-template-rows: 100vh;
+    transition: all 0.5s;
+}
+
+.sidenav{
+    grid-area: left;
+    grid-area: left;
+    background-color: #25293c;
+}
+
+.logo{
+    width: auto;
+    height: 48px;
+    background-image: url("../Images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 16px;
+}
+
+.main{
+    grid-area: main;
+    background-color: #f0f0f0;
+    padding: 16px 24px 0 24px;
+}
+
+.top{
+    height: 64px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px -4px rgba(0, 0, 0, 0.47);
+    background-color: #ffffff;
+}
