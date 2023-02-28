@@ -15,8 +15,12 @@
 </head>
 
 <body>
-    <div class="container" id="container">
+    <div class="container">
         <div class="sidenav">
+            <div class="logo"></div>
+            <div class="menu-accordion">
+
+            </div>
 
         </div>
 
@@ -26,17 +30,10 @@
 
         <div class="main">
             <div class="top">
-                <div class="toggle-sidenav" id="toggle-sidenav">
-                    <i class="grey bars big icon"></i>
-                </div>
+
             </div><!--top-->
+
         </div>
     </div>
-    <script>
-        $('.toggle-sidenav, .toggle-sidenav-open').click(function(){
-            $('#container').toggleClass('container-off');
-            $('#toggle-sidenav').toggleClass('toggle-sidenav-open');
-        });
-    </script>
 </body>
 </html>

@@ -13,20 +13,19 @@
     transition: all linear 0.5s;
 }
 
-.container-off{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas: "main";
-    grid-template-columns: 1fr;
-    grid-template-rows: 100vh;
-    transition: all linear 0.5s;
-}
-
 .sidenav{
     grid-area: sidenav;
     background-color: #25293c;
     transition: all linear 0.5s;
+}
+
+.logo{
+    height: 64px;
+    background-image: url("../Images/oc_logo_full.svg");
+    background-repeat: no-repeat;
+    background-size: 180px;
+    background-position: center;
+    background-color: #2F3349;
 }
 
 .main{
@@ -40,19 +39,6 @@
     background-color: #ffffff;
 }
 
-.toggle-sidenav, .toggle-sidenav-open{
-    width: 72px;
-    padding: 18px;
-    cursor: pointer;
-}
-
 @media only screen and (max-width: 768px){
-    .container{
-        display: grid;
-        width: 100%;
-        height: 100%;
-        grid-template-areas: "main";
-        grid-template-columns: 1fr;
-        grid-template-rows: 100vh;
-    }
+
 }
