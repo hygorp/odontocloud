@@ -20,6 +20,10 @@
             <div class="logo"></div>
         </div>
 
+        <div class="header">
+
+        </div>
+
         <div class="main">
             <div class="top">
 
