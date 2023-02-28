@@ -9,6 +9,5 @@ CREATE TABLE IF NOT EXISTS oc_usuarios(
 );
 CREATE TABLE IF NOT EXISTS oc_funcionarios(
     matricula_funcionario  INT NOT NULL UNIQUE PRIMARY KEY DEFAULT 100,
-    nome_funcionario       VARCHAR(150) NOT NULL,
-
+    nome_funcionario       VARCHAR(150) NOT NULL
 )
