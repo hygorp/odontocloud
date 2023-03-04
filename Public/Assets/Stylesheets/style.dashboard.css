@@ -13,6 +13,16 @@
     transition: all linear 0.5s;
 }
 
+.container-off{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    transition: all linear 0.5s;
+}
+
 .sidenav{
     grid-area: sidenav;
     background-color: #25293c;
@@ -39,6 +49,30 @@
     background-color: #ffffff;
 }
 
-@media only screen and (max-width: 768px){
+.toggle-sidenav, .toggle-sidenav-open{
+    width: 72px;
+    padding: 18px;
+    cursor: pointer;
+}
 
+@media only screen and (max-width: 768px){
+    .container{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "main";
+        grid-template-columns: 1fr;
+        grid-template-rows: 100vh;
+        transition: all linear 0.5s;
+    }
+
+    .container-off{
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "sidenav main";
+        grid-template-columns: 260px 4fr;
+        grid-template-rows: 100vh;
+        transition: all linear 0.5s;
+    }
 }
