@@ -7,6 +7,9 @@
     if (!(isset($_SESSION['usuario']))) {
         header("location: index.php");
     }
+    use App\Classes\Dao\ProfissionaisDao;
+    include 'App/Settings/Conexao.php';
+    include 'App/Classes/Dao/ProfissionaisDao.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -30,7 +33,7 @@
             <div class="logo"></div>
             <div class="menu-accordion">
 
-            </div>
+            </div><!--menu-accordion-->
 
         </div>
 
@@ -64,14 +67,12 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    $('.ui.dropdown').dropdown();
-                </script>
             </div><!--top-->
 
         </div>
     </div>
     <script>
+        $('.ui.dropdown').dropdown();
         $('.toggle-sidenav, .toggle-sidenav-open').click(function(){
             $('#container').toggleClass('container-off');
             $('#toggle-sidenav').toggleClass('toggle-sidenav-open');

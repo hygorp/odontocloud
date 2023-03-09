@@ -27,6 +27,7 @@
     grid-area: sidenav;
     background-color: #25293c;
     transition: all linear 0.5s;
+
 }
 
 .logo{
@@ -40,7 +41,7 @@
 
 .main{
     grid-area: main;
-    background-color: #f0f0f0;
+    background-color: #ebebeb;
 }
 
 .top{

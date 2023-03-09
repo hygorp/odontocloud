@@ -18,4 +18,14 @@ class ProfissionaisDao{
             return false;
         }
     }
+
+    public function dadosProfissional($usuario){
+        $sql = "SELECT * FROM oc_profissionais WHERE '".$usuario."' = usuario_profissional";
+        $exe = mysqli_query($this->conexao->getDb_con(), $sql);
+        if(mysqli_num_rows($exe) > 0){
+            return $exe;
+        }else{
+            return false;
+        }
+    }
 }
