@@ -1,3 +1,13 @@
+<?php
+    SESSION_START();
+    if(isset($_SESSION['usuario'])){
+        header('location: dashboard.php');
+    }
+
+    use App\Classes\Dao\ProfissionaisDao;
+    include 'App/Settings/Conexao.php';
+    include 'App/Classes/Dao/ProfissionaisDao.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,6 +21,7 @@
     <script type="text/javascript" src="Public/Assets/JQuery/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="Public/Assets/Semantic-ui/semantic.min.js"></script>
     <script type="text/javascript" src="Public/Assets/Toastr/toastr.min.js"></script>
+    <script type="text/javascript" src="Public/Assets/Validations/validations.oc.js"></script>
     <script>let url = "http://localhost:8080/";toastr.options = {"closeButton": true, "debug": false, "newestOnTop": false, "progressBar": true, "positionClass": "toast-top-center", "preventDuplicates": false, "onclick": null, "showDuration": "300", "hideDuration": "1000", "timeOut": "5000", "extendedTimeOut": "1000", "showEasing": "swing", "hideEasing": "linear", "showMethod": "fadeIn", "hideMethod": "fadeOut"}</script>
 </head>
 <body>
@@ -22,7 +33,7 @@
 
     <div class="login">
         <div class="login_form">
-            <form class="ui large form">
+            <form class="ui form large frmLogin" method="post" id="frmLogin">
                 <div class="logo"></div>
                 <div class="ui divider"></div>
                 <div class="field">
@@ -34,14 +45,31 @@
                     <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <br>
-                <button class="ui primary right labeled icon large button fluid" type="submit">
+                <button class="ui primary right labeled icon large button fluid" type="submit" name="logar">
                     <i class="right lock icon"></i>
                     Entrar
                 </button>
+                <div class="ui error message"></div>
             </form>
         </div>
     </div>
 </div>
-
+    <?php
+        if($_POST){
+            $ProfissionaisDao   = new ProfissionaisDao();
+            $usuario            = $_POST['usuario'];
+            $senha              = md5($_POST['senha']);
+            $validaProfissional = $ProfissionaisDao->efetuaLogin($usuario, $senha);
+            $tentativaLogin     = 4;
+            if(isset($_POST['logar'])){
+                if($validaProfissional == true){
+                    $_SESSION['usuario'] = $usuario;
+                    header('location: dashboard.php');
+                }else{
+                    echo '<script>toastr["error"]("Usuário ou Senha incorretos!")</script>';
+                }
+            }
+        }
+    ?>
 </body>
 </html>
