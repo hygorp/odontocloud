@@ -1,5 +1,5 @@
 <?php
-    SESSION_START();
+    session_start();
     if(isset($_SESSION['usuario'])){
         header('location: dashboard.php');
     }
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="Public/Assets/Semantic-ui/semantic.min.js"></script>
     <script type="text/javascript" src="Public/Assets/Toastr/toastr.min.js"></script>
     <script type="text/javascript" src="Public/Assets/Validations/validations.oc.js"></script>
-    <script>let url = "http://localhost:8080/";toastr.options = {"closeButton": true, "debug": false, "newestOnTop": false, "progressBar": true, "positionClass": "toast-top-center", "preventDuplicates": false, "onclick": null, "showDuration": "300", "hideDuration": "1000", "timeOut": "5000", "extendedTimeOut": "1000", "showEasing": "swing", "hideEasing": "linear", "showMethod": "fadeIn", "hideMethod": "fadeOut"}</script>
+    <script>toastr.options = {"closeButton": true, "debug": false, "newestOnTop": false, "progressBar": true, "positionClass": "toast-top-center", "preventDuplicates": false, "onclick": null, "showDuration": "300", "hideDuration": "1000", "timeOut": "5000", "extendedTimeOut": "1000", "showEasing": "swing", "hideEasing": "linear", "showMethod": "fadeIn", "hideMethod": "fadeOut"}</script>
 </head>
 <body>
 
@@ -64,6 +64,7 @@
             if(isset($_POST['logar'])){
                 if($validaProfissional == true){
                     $_SESSION['usuario'] = $usuario;
+                    $_SESSION['senha']   = $senha;
                     header('location: dashboard.php');
                 }else{
                     echo '<script>toastr["error"]("Usuário ou Senha incorretos!")</script>';

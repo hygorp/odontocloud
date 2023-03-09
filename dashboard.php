@@ -1,3 +1,13 @@
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_erros', 1);
+    error_reporting(E_ALL);
+    session_start();
+
+    if (!(isset($_SESSION['usuario']))) {
+        header("location: index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -34,6 +44,29 @@
                     <i class="grey bars big icon"></i>
                 </div>
 
+                <div class="logged-user-option">
+                    <div class="ui bellow pointing inline dropdown">
+                        <div class="text">
+                            <img class="ui avatar image" src="https://avatars.githubusercontent.com/u/16942121">
+                            hygorp
+                        </div>
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <div class="item">
+                                Jenny Hess
+                            </div>
+                            <div class="item">
+                                Elliot Fu
+                            </div>
+                            <div class="item">
+                                Stevie Feliciano
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $('.ui.dropdown').dropdown();
+                </script>
             </div><!--top-->
 
         </div>
